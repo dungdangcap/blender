@@ -146,8 +146,10 @@ a:hover {
 }
 .night {
     background-color: rgba(147, 147, 147, 0.45);
+    /* color: white; */
 }
 .dark {
+    /* color: white; */
     background-image: linear-gradient( to right,#485563 ,#29323c );;
 }
 /* animation */

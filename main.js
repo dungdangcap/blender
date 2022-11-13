@@ -10,3 +10,5 @@ changEbutton.addEventListener(
         event.currentTarget.classList.toggle('night')
     }
 )
+var dangeR = "Please click sun to change mode"
+alert(dangeR)
