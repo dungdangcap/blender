@@ -21,8 +21,9 @@ body {
     
     color: #224;
     background:
-      url(https://source.unsplash.com/E8Ufcyxz514/2400x1823)
+        linear-gradient(to top, #d38312, #a83279)
       center / cover no-repeat fixed;
+      /* animation: loaDing 1.5s linear infinite alternate; */
 }
 .all {
     width: 280px;
@@ -35,12 +36,26 @@ body {
 .header {
     animation: headerIn 0,2s linear;
     line-height: 25px;
+    position: relative;
 }
 h3 {
     animation: leftIn .5s linear;
     font-size: 25px;
     font-style: bold;
     font-weight: 500;
+}
+.mode {
+    border-radius: 15px;
+    right: 0;
+    background: transparent;
+    top: 0;
+    width: 30px;
+    border: none;
+    position: absolute;
+}
+.mode .icon {
+    text-align: center;
+    width: 20px;
 }
 .header p {
     animation: leftIn .6s linear;
@@ -129,6 +144,12 @@ a {
 a:hover {
     transform: translateY(-2px);
 }
+.night {
+    background-color: rgba(147, 147, 147, 0.45);
+}
+.dark {
+    background-image: linear-gradient( to right,#485563 ,#29323c );;
+}
 /* animation */
 @keyframes imgIn {
     0% {
@@ -170,6 +191,14 @@ a:hover {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+@keyframes loaDing {
+    0% {
+        background-image: linear-gradient(to top, #d38312, #a83279);
+    }
+    100% {
+        background-image: linear-gradient(to top, #a83279,#d38312);
     }
 }
 /* reponsive */
