@@ -54,6 +54,7 @@ h3 {
     position: absolute;
 }
 .mode .icon {
+    animation: In .5s linear;
     text-align: center;
     width: 20px;
 }
@@ -144,9 +145,20 @@ a {
 a:hover {
     transform: translateY(-2px);
 }
-.night {
+.dark .all {
     background-color: rgba(147, 147, 147, 0.45);
     /* color: white; */
+}
+.moon {
+    display: none;
+}
+.dark .moon {
+    /* animation: In .5s linear; */
+    display: block;
+}
+.dark .sun {
+    display: none;
+    /* animation: In .5s linear; */
 }
 .dark {
     /* color: white; */
@@ -201,6 +213,16 @@ a:hover {
     }
     100% {
         background-image: linear-gradient(to top, #a83279,#d38312);
+    }
+}
+@keyframes In {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 /* reponsive */
